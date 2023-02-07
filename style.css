@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Trispace:wght@300;400;500&display=swap');
+
+/* laying basics for the website */
+:root {
+    --font-family: 'Trispace';
+    --light-font: 300;
+    --normal-font: 400;
+    --bold-font: 500;
+    --bg-color: #f9f6f6;
+    --primary-color: #333333; 
+    --secondary-color: #76d1fb;
+    --tertiary-color: #ececee;
+    --bottom-margin: 0.5rem;
+    --bottom-margin-2: 1rem;
+    --line-height: 1.7rem;
+    --transition: 0.3s;
+}
+
+/* scroll behavior */
+html {
+    scroll-behavior: smooth;
+    padding: 0rem 0.5rem;
+    padding-bottom: 1rem;
+}
+
+/* css resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* for the screen */
+body {
+    font-family: var(--font-family); 
+    background-color: var(--bg-color); 
+    color: var(--primary-color);
+}
+
+/* INDEX/HOME PAGE */
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+header a {
+    font-weight: var(--normal-font);
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+header h1 {
+    text-align: left;
+    font-size: 8.5rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+    transition-property: color;
+    transition-timing-function: linear;
+}
+
+header h1:hover {
+    color: var(--secondary-color);
+}
+
+header h3 {
+    padding-top: 4rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+hr {
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0.15rem;
+    background-color: var(--primary-color);
+}
+
+/* description */
+.section-containers {
+    padding-right: 3rem;
+}
+
+.description {
+    float: left;
+    width: 28%;
+    padding-bottom: 1rem;
+    margin-right: 6rem;
+}
+
+.description p {
+    padding: 1rem 1rem;
+    background: var(--tertiary-color);
+    border-radius: 2rem;
+    line-height: 1.5vw;
+    font-size: 1.25vw;
+}
+
+.hr1 {
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+}
+
+.description h2 {
+    padding-bottom: 2rem;
+}
+
+.mail-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+    line-height: 1.3rem;
+}
+
+.mail-link:hover {
+    color: var(--secondary-color);
+}
+
+.hr2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+ul a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+    line-height: 1.3rem;
+}
+
+ul a:hover{
+    color: var(--secondary-color);
+}
+
+/* files */
+.files h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.file-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.file-grid .file-cell {
+    width: 50%;
+}
+
+.file-cell img {
+    width: calc(100% - (1.5rem * 2));
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(.5rem .5rem 1rem #cecece);
+}
+
+.file-cell a {
+    padding: 0.5vw 0.5vw;
+    line-height: 4vw;
+    text-decoration: none;
+    font-size: 2.15vw;
+    color: var(--primary-color);
+    transition: var(--transition);
+    transition-property: color;
+    transition-timing-function: linear;
+}
+
+.file-cell a:hover{
+    background-color: var(--secondary-color);
+    border-radius: 1vw;
+    color: var(--bg-color);
+}
+
+/* SECTION-INFO PAGE */
+
+/* general structure (used in section-info AND resources) */
+.section-info-containers {
+    padding-right: 0.5rem;
+}
+
+/* home button (used in section-info AND resources) */
+.home {
+    text-decoration: none;
+    float: left;
+    padding: 1rem;
+    border-radius: 2rem;
+    color: #bebebe;
+    background-color: var(--tertiary-color);
+    font-family: var(--font-family);
+    font-size: 2vw;
+    transition: var(--transition);
+    border: none;
+    box-shadow: 0.1rem 0.3rem #999;
+}
+
+.home:hover {
+    color: var(--tertiary-color);
+    background-color: #bebebe;
+    transition-property: color;
+    transition-timing-function: linear;
+}
+
+/* section info descriptions */
+.section-info-description {
+    margin-left: 22rem;
+    margin-right: 1.5rem;
+    line-height: 2vw;
+}
+
+.section-info-description h1{
+    color: var(--primary-color);
+    font-size: 4vw;
+    line-height: 3.5vw;
+}
+
+.section-info-description p {
+    overflow: hidden;
+    font-size: 1.5vw;
+    position: sticky;
+    padding-top: 1.5rem;
+}
+
+.section-info-description a {
+    padding: 0.2rem 0.2rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.section-info-description a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    color: var(--tertiary-color);
+    transition-property: color;
+    transition-timing-function: ease;
+}
+
+/* information table */
+.section-info-description table {
+    width: 100%;
+}
+
+.section-info-description th {
+    text-align: left;
+    font-size: 1.4vw;
+}
+
+.section-info-description td {
+    font-size: 1.2vw;
+}
+
+/* RESOURCES PAGE */
+.resources-section {
+    margin-left: 22rem;
+    margin-right: 1.5rem;
+    line-height: 2vw;
+}
+
+.resources-section h1{
+    color: var(--primary-color);
+    font-size: 4vw;
+    line-height: 3.5vw;
+}
+
+.resources-section p {
+    overflow: hidden;
+    font-size: 1.5vw;
+    position: sticky;
+    padding-top: 1.5rem;
+}
+
+.resources-section a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.resources-section a:hover {
+    color: var(--secondary-color);
+    transition-timing-function: ease-in;
+    border-bottom: 0.1rem solid var(--secondary-color);
+}
+
+/* table */
+.resources-table {
+    width: 90%;
+    margin-top: 4vw;
+}
+
+.resources-table th {
+    text-align: left;
+    font-size: 1.4vw;
+}
